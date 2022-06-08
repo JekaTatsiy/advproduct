@@ -2,19 +2,19 @@ package advproduct_mock
 
 import (
 	"github.com/stretchr/testify/mock"
-	advProductsRepo "products/advproduct"
+	"github.com/JekaTatsiy/advproduct/advproduct"
 )
 
 type RepositoryMock struct {
 	mock.Mock
 }
 
-func (r *RepositoryMock) ListByPosition(position advProductsRepo.Position) ([]*advProductsRepo.Item, error) {
+func (r *RepositoryMock) ListByPosition(position advproduct.Position) ([]*advproduct.Item, error) {
 	args := r.Called(position)
-	return args.Get(0).([]*advProductsRepo.Item), args.Error(1)
+	return args.Get(0).([]*advproduct.Item), args.Error(1)
 }
 
-func (r *RepositoryMock) Update(items []*advProductsRepo.Item) error {
+func (r *RepositoryMock) Update(items []*advproduct.Item) error {
 	args := r.Called(items)
 	return args.Error(0)
 }

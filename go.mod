@@ -1,4 +1,4 @@
-module products
+module github.com/JekaTatsiy/advproduct
 
 go 1.18
 

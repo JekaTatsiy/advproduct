@@ -3,8 +3,8 @@ package advproduct_test
 import (
 	"testing"
 
-	"products/advproduct"
-	"products/advproduct/mock"
+	"github.com/JekaTatsiy/advproduct/advproduct"
+	advproduct_mock "github.com/JekaTatsiy/advproduct/advproduct/mock"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
